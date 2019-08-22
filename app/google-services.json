@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "989124004340",
+    "firebase_url": "https://project3dteam4example.firebaseio.com",
+    "project_id": "project3dteam4example",
+    "storage_bucket": "project3dteam4example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989124004340:android:1984c037b2d528f8",
+        "android_client_info": {
+          "package_name": "pad.time4.recyclerview3dtime4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989124004340-8hi2emr17que6lip9jnufktp0ep6lsro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pad.time4.recyclerview3dtime4",
+            "certificate_hash": "7e6759548e8119d58b11d893ab7ee2036f7e70a0"
+          }
+        },
+        {
+          "client_id": "989124004340-v2oldt5hgahci0tsg25d2kthf6amoluj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxYxdUaKw-l8ke1md6Qx_uQjE5P_4OCsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989124004340-v2oldt5hgahci0tsg25d2kthf6amoluj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

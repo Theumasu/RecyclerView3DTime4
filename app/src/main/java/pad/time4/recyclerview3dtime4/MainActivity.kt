@@ -1,10 +1,11 @@
 package pad.time4.recyclerview3dtime4
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,9 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val usuario :Map<Any, Any> = mapOf<Any, Any>("nome" to "Oberdan", "idade" to 25)
+
+        val db :FirebaseFirestore = FirebaseFirestore.getInstance()
+        db.collection(collectionPath: "usuarios").document(documentPath: "Oberdan").set(usuario)
+        .addOnSuccessListener (Log.d(tag: "BAMCODEDADOS", msg: "usuario com sucesso"))
+
+
+
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 
-        recyclerView.layoutManager = LinearLayoutManager (this, LinearLayout.VERTICAL, false)
+        recyclerView.layoutManager = LinearLayoutManager (this)
 
         val users = ArrayList<User>()
 
@@ -35,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         users.add(User("A Cabana", "Ficção"))
 
         val adapter = CustomAdapter(users)
-
 
         recyclerView.adapter = adapter
     }
